@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AllowFileAccessOutsideOfWidget</key>
+	<true/>
+	<key>AllowSystem</key>
+	<true/>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleDisplayName</key>
+	<string>Lyrics</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.priddle.widget.Lyrics</string>
+	<key>CFBundleName</key>
+	<string>Lyrics</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
+	<key>CFBundleVersion</key>
+	<string>1.0</string>
+	<key>CloseBoxInsetX</key>
+	<integer>15</integer>
+	<key>CloseBoxInsetY</key>
+	<integer>15</integer>
+	<key>Height</key>
+	<integer>380</integer>
+	<key>MainHTML</key>
+	<string>lyrics.html</string>
+	<key>Plugin</key>
+	<string>iTunesListener.bundle</string>
+	<key>Width</key>
+	<integer>280</integer>
+</dict>
+</plist>

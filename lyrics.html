@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="stylesheets/lyrics.css">
+    <script type="text/javascript" src="file:///System/Library/WidgetResources/AppleClasses/AppleAnimator.js" charset="utf-8"></script>
+    <script type="text/javascript" src="file:///System/Library/WidgetResources/AppleClasses/AppleButton.js" charset="utf-8"></script>
+    <script type="text/javascript" src="file:///System/Library/WidgetResources/AppleClasses/AppleInfoButton.js" charset="utf-8"></script>
+    <script type="text/javascript" src="file:///System/Library/WidgetResources/AppleClasses/AppleScrollbar.js" charset="utf-8"></script>
+    <script type="text/javascript" src="file:///System/Library/WidgetResources/AppleClasses/AppleScrollArea.js" charset="utf-8"></script>
+
+    <script type="text/javascript" src="js/jquery.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/resize.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/lyrics.js" charset="utf-8"></script>
+</head>
+<body onload="load();">
+  <div id="container">
+    <div id="front">
+      <div id="header">
+        <div id="album-artist">
+          <span id="artist"></span>
+          <span id="album"></span>
+        </div>
+        <div>
+          <span id="song"></span>
+          <span id="rating"></span>
+        </div>
+      </div>
+      <div id="lyrics-container">
+        <div id="lyrics-content"></div>
+      </div>
+      <div id="lyrics-scrollbar"></div>
+    </div>
+    <div id="back"></div>
+    <img id="resize-window" src="/System/Library/WidgetResources/resize.png" onmousedown="mouseDown(event);" alt="resize">
+  </div>
+</body>
+</html>
