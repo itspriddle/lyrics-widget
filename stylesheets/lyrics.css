@@ -103,3 +103,19 @@ body {
 
 @-webkit-keyframes 'fade-in' { 0% { opacity: 0; } 100% { opacity: 1; } }
 @-webkit-keyframes 'slide-down' { 0% { top: -10px; } 100% { top: 0px; } }
+
+#rating {
+  display: inline-block;
+  position: absolute;
+  top: 22px;
+  right: 0;
+  width: 71px;
+  height: 13px;
+  background: url('../images/star-grid.png') no-repeat;
+}
+#rating.zero  { background-position: 0 0;     }
+#rating.one   { background-position: 0 -13px; }
+#rating.two   { background-position: 0 -26px; }
+#rating.three { background-position: 0 -39px; }
+#rating.four  { background-position: 0 -52px; }
+#rating.five  { background-position: 0 -65px; }
