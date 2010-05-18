@@ -31,6 +31,14 @@ $.extend(Lyrics, {
     this.scrollbar = scrollbar;
     this.scroll_area = scroll_area;
   },
+  ratings: {
+    0: 'zero',
+    1: 'one',
+    2: 'two',
+    3: 'three',
+    4: 'four',
+    5: 'five'
+  },
   get_info: function () {
     var cmd = widget.system("/usr/bin/osascript get-lyrics.scpt", null),
         res = $.trim(cmd.outputString);
@@ -46,7 +54,7 @@ $.extend(Lyrics, {
         artist: data[0],
         album:  data[1],
         song:   data[2],
-        rating: data[3],
+        rating: parseInt(data[3]),
         lyrics: data[4].replace(/\r/g, '\n<br />')
       };
     } else {
@@ -57,15 +65,17 @@ $.extend(Lyrics, {
     var lyrics = Lyrics.get_info();
 
     if (lyrics.error) {
-      $('#header').hide();
+      $('#rating').html('').attr('class', 'zero');
+      $('#header, #rating').hide();
       $('#album, #artist, #song').html('');
       $('#lyrics-content').html(lyrics.error);
     } else {
-      $('#header').show();
+      $('#header, #rating').show();
       $('#album').html(lyrics.album);
       $('#artist').html(lyrics.artist);
       $('#song').html(lyrics.song);
       $('#lyrics-content').html(lyrics.lyrics);
+      $('#rating').attr('class', Lyrics.ratings[lyrics.ratings]);
       Lyrics.scroll_area.refresh();
     }
   }
