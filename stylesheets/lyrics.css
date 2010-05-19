@@ -4,24 +4,21 @@
  according to the license.txt file included in the project.
  */
 
-html {
-  height: 100%;
-}
+html { height: 100%; }
 
-body {
-  position: relative;
-  height: 100%;
-  color: rgba(255,255,255,0.8);
-  font-family: 'Lucida Grande';
-}
+body { position: relative; height: 100%; /*color: rgba(255,255,255,0.5);*/color:#bababa; font-family: 'Lucida Grande'; }
+
+div.left {float: left;}
+div.right {float: right;}
+
+.clearfix:after{clear:both; content:'.'; display:block; visibility:hidden; height:0;}
+.clearfix{display:inline-block;}
+* html .clearfix{height:1%;}
+.clearfix{display:block;}
 
 #container {
-  -webkit-animation-timing-function: ease;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-duration: 0.5s;
-  -webkit-animation-name: 'fade-in';
   background: -webkit-gradient(linear, left top, right top, from(rgba(0,0,0,0.95)), to(rgba(0,0,0,0.8)));
-  border: 1px solid rgba(0,0,0,0.75);
+  border: 1px solid rgba(0,0,0,0.65);
   -webkit-border-radius: 5px;
   position: absolute;
   top: 0px;
@@ -31,88 +28,70 @@ body {
 }
 
 #front {
-  padding: 10px;
+  padding: 5px 10px 10px 10px;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,0.20)), to(rgba(255,255,255,0.0)));
   border-left: 1px solid rgba(255,255,255,0.1);
-  border-top: 1px solid rgba(255,255,255,0.75);
+  border-top: 1px solid rgba(255,255,255,0.45);
   -webkit-border-radius: 4px;
   height: 90%;
 }
 
 
 #header {
-  -webkit-animation-timing-function: ease;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-duration: 0.5s;
-  -webkit-animation-name: 'slide-down';
+  overflow: hidden;
+  position: relative;
+  opacity: 0.9;
+  font-family: "HelveticaNeue-CondensedBold";
+  font-weight: normal !important;
+  text-transform: uppercase;
+  /*color: rgba(255,255,255,0.7);*/
+  width: 100%;
+  height: 41px;
+/*  text-shadow: 0 0 2px #ccc;*/
+  -webkit-border-radius: 4px;
+}
+
+#header div.main {
+  overflow: hidden; text-overflow: ellipsis;white-space: nowrap;
+  font-size: 22px;
+}
+
+#header div.sub {
+  overflow: hidden; text-overflow: ellipsis;white-space: nowrap;
+  padding: 0;
+  margin:0;
   position:relative;
-  font-weight: bold;
-  height: 40px;
-  text-shadow: #111 -1px -1px 1px;
-}
-
-#album-artist {
-  border-bottom: 1px solid rgba(255,255,255,0.65);
-}
-
-#artist {
+  top: -5px;
   font-size: 14px;
 }
 
-#artist:after {
-  content: " - ";
-}
+#artist {position: relative;margin-right: 10px;margin:0;padding:0;}
 
-#album, #song {
-  font-size: 12px;
-}
+#album {  }
 
-#lyrics-container {
-  font-size: 11px;
-  position: absolute;
-  top: 60px;
-  bottom: 20px;
-  left: 10px;
-  right: 25px;
-  overflow: hidden;
-}
+#song { }
 
-#lyrics-content {
-  padding-left: 3px;
-  padding-right: 5px;
-  line-height: 1.5;
-}
+#lyrics-container { font-size: 11px; position: absolute; top: 50px; bottom: 20px; left: 10px; right: 25px; overflow: hidden; }
 
-#resize-window {
-  position: absolute;
-  right: 4px;
-  bottom: 4px;
-  -apple-dashboard-region: dashboard-region(control rectangle);
-}
+#lyrics-content { padding-left: 2px; padding-right: 5px; line-height: 1.5; }
 
+#resize-window { position: absolute; right: 4px; bottom: 4px; -apple-dashboard-region: dashboard-region(control rectangle); }
 
-#lyrics-scrollbar {
-  position: absolute;
-  top: 60px;
-  bottom: 12px;
-  right: 10px;
-  width: 19px;
-}
+#lyrics-scrollbar { position: absolute; top: 50px; bottom: 12px; right: 10px; width: 19px; }
 
 #back {display: none;}
 
-@-webkit-keyframes 'fade-in' { 0% { opacity: 0; } 100% { opacity: 1; } }
-@-webkit-keyframes 'slide-down' { 0% { top: -10px; } 100% { top: 0px; } }
-
 #rating {
-  display: inline-block;
-  position: absolute;
-  top: 22px;
-  right: 0;
+  opacity: 0.6;
+  float: left;
+/*  position: absolute;
+  top: 28px;
+  left: 0;*/
   width: 71px;
   height: 13px;
   background: url('../images/star-grid.png') no-repeat;
 }
+
 #rating.zero  { background-position: 0 0;     }
 #rating.one   { background-position: 0 -13px; }
 #rating.two   { background-position: 0 -26px; }
