@@ -2,7 +2,7 @@ Lyrics
 ======
 It's a Dashboard widget that displays your MP3's lyrics.
 
-![A Screenshot](images/lyrics-widget-screen.png)
+![A Screenshot](/itspriddle/lyrics-widget/raw/master/images/lyrics-widget-screen.png)
 
 This widget does not look up lyrics for you. They already
 need to be in your MP3's ID3 tags.
